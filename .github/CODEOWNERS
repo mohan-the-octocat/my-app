@@ -1,0 +1,4 @@
+* @mohan-the-octocat
+*.js @mohan-the-octocat
+*.yml @chennaivennai
+/public/ @mohan-the-octocat
