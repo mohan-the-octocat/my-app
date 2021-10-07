@@ -1,0 +1,44 @@
+---
+name: Create Demo
+title: "Demo Creation"
+description: Create a Demo repository and associated cloud resources
+labels:
+  - demo
+assignees:
+  - octodemobot
+
+body:
+  - type: dropdown
+    attributes:
+      label: '>>>demo-repository-owner<<<'
+      description: The organization to create the demo repository under,
+      options:
+        - octodemo
+    validations:
+      required: true
+
+  - type: input
+    attributes:
+      label: '>>>demo-repository-name<<<'
+      description: The name of the demo repository to be created, must be unique under the above owner/organization.
+      placeholder: repository name
+    validations:
+      required: true
+
+  - type: dropdown
+    attributes:
+      label: '>>>template<<<'
+      description: The demo template to use when creating the demo.
+      options:
+        - octodemo/template-demo-github-user-search
+        - octodemo/template-bookstore-v2
+        - octodemo/template-aks-actions-deployment
+    validations:
+      required: true
+
+  - type: input
+    attributes:
+      label: '>>>template-branch<<<'
+      description: The branch in the template repo used to build the demo
+    validations:
+      required: false
